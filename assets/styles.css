@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-black: rgb(46, 46, 46);
+    --clr-gray: rgb(126, 126, 126);
+}
+
+/* || TYPOGRAPHY */
+h1 {
+    font-family: 'open_sansextrabold';
+    font-size: 1.35rem;
+    color: var(--clr-black);
+}
+h2,h3,h4 {
+    font-family: 'open_sans_semibold';
+}
+p {
+    font-family: "open_sans_regular";
+    font-size: .5rem;
+    color: var(--clr-black);
+}
+ul {
+    list-style: none;
+    color: var(--clr-black);
+}
+ul > li {
+    margin: 5px 0;
+}
+main {
+    width: 595px;
+    margin: 10px auto;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.301);
+    padding: 1rem;
+}
+.pale-text {
+    color: var(--clr-gray);
+}
+.bold-text {
+    font-weight: 900;
+}
+.block-text {
+    display: block;
+    margin: 1em;
+}
+section:last-child {
+    margin-top: 1em;
+    border-top: 1px solid var(--clr-gray);
+}
+
+
+
+.total-payment {
+    position: relative;
+}
+
+.total-price-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.total-price {
+    text-align: center;
+    font-size: .8em;
+    font-weight: 900;
+    padding: 0;
+}
+
+/* ------------- Section Headers -------------*/
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.623);
+    padding: 5px;
+}
+.section-header p {
+    font-size: .85em;
+}
+
+/* ------------- Invoice Top Styles -------------*/
+.invoice-section {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-row: 2;
+    margin: 10px 0;
+    padding: 15px;
+    border: 3px solid black;
+}
+.user-detail {
+    border-right: 1px solid black;
+}
+.user-detail span.block-text, .user-detail span.header{
+    font-size: 1.5em;
+}
+.user-detail span.header {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* __invoice detail*/
+.invoice-detail {
+    padding-left: 15px;
+}
+.invoice-detail .left-side, .invoice-detail .right-side {
+    font-size: .6rem;
+}
+.invoice-detail .flex-div {
+    font-weight: 900;
+}
+.invoice-detail .flex-div span {
+    font-weight: 100;
+}
+
+.tel-number {
+    text-align: right;
+    font-size: .9em;  
+
+}
+.flex-div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+
+/* ------------- Invoice table ------------- */
+.waste-oil-detail {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px,1fr));
+    margin-top: 10px;
+}
+.waste-oil-detail > div {
+    border-left: 2px solid;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color:  black;
+    padding: .5rem .2rem;
+    text-align: center;
+}
+.waste-oil-detail > div:last-child {
+    border-right: 2px solid;
+    padding-bottom: 0;
+}
+.waste-oil-detail > div > h3 {
+    border-bottom: 1px solid black;
+    margin-bottom: 3px;
+    font-size: .7rem;
+}
+.waste-oil-detail > div > p {
+    font-size: .45rem;
+    border-bottom: 1px solid rgb(165, 165, 165);
+}
+.waste-oil-detail > div > p:nth-child() { 
+    /* calc() ekle!!! ------------------------------------ */
+    font-size: .45rem;
+    border-bottom: none;
+}
